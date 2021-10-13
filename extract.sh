@@ -61,7 +61,6 @@ for MDSYSTEM in "MEM" ; do  # can add more MD systems to test here
                        DOMDEC_="1 1 1"
                    fi
 
-                   # CSV
                    printf "%4d %4d %4d %4d %5d %8s %8.3f %8.3f  # %6s, %s, %s, %s\n" "${N_GPU__}" "${N_MPI__}" "${N_OMP__}" "${PMENODE}" "${NSTLIST}" "${DOMDEC_}" "$R_COUL_" "$NANOSPD" "${GPUTYPE}" "$CPUTYPE" "$VERSION" "$SUBDIR"  >> $BASE/$OUTPUTFILE
                else
                    echo "error"
