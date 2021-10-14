@@ -9,6 +9,8 @@
 #SBATCH --mem-per-gpu=44GB
 #SBATCH --time=18:00:00
 
+### Based on Kutzner et al.'s dobenchs.sh
+
 module use /ifs/opt_cuda/modulefiles
 module load gromacs/cuda11.2/2021.3
 
