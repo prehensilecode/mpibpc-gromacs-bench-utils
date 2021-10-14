@@ -53,7 +53,7 @@ for MDSYSTEM in "MEM" ; do  # can add more MD systems to test here
                    NSTLIST=`egrep     'nstlist\ += '                 $FILENM | awk '{ print $3 }'`
                    ACCELER=`grep      'Acceleration most likely'     $FILENM | awk '{ print $8 }'`
                    BRAND__=`grep      'Brand: '                      $FILENM | awk '{ print $3$5 }'`
-                   PMENODE=`grep      ', separate PME nodes'         $FILENM | awk '{ print $NF }'`
+                   PMENODE=`grep      ', separate PME ranks'         $FILENM | awk '{ print $NF }'`
 #                   R_COUL_=`grep      '   optimal pme grid '         $FILENM | awk '{ print $9 }'`
                    R_COUL_=`grep      '   final   '                  $FILENM | awk '{ print $2 }'`
                    DOMDEC_=`grep      'Domain decomposition grid '   $FILENM | cut -d , -f 1 | awk '{ print $4 " " $6 " " $8 }'`
