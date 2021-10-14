@@ -50,7 +50,7 @@ for MDSYSTEM in "MEM" ; do  # can add more MD systems to test here
                    N_GPU__=`grep      'GPUs selected for this run'   $FILENM | awk '{ print $4 }'`
                    NANOSPD=`grep      'Performance'                  $FILENM | awk '{ print $2 }'`
                    NEIGHBS=`grep      'Neighbor search'              $FILENM | awk '{ print $8 }'`
-                   NSTLIST=`grep      'nstlist\ += '                 $FILENM | awk '{ print $3 }'`
+                   NSTLIST=`egrep     'nstlist\ += '                 $FILENM | awk '{ print $3 }'`
                    ACCELER=`grep      'Acceleration most likely'     $FILENM | awk '{ print $8 }'`
                    BRAND__=`grep      'Brand: '                      $FILENM | awk '{ print $3$5 }'`
                    PMENODE=`grep      ', separate PME nodes'         $FILENM | awk '{ print $NF }'`
