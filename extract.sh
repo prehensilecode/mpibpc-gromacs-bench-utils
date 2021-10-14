@@ -12,7 +12,7 @@ BASE=$( pwd )
 OUTPUTFILE=results.txt
 OUTPUT_ERR=errors.txt
 
-printf "#GPU #MPI #OMP nPME  nstl  DD grid   r_Coul   ns/day  # GPUtype, processor, directory\n" > $BASE/$OUTPUTFILE
+printf "#GPU #MPI #OMP nPME  nstl  DD grid   r_Coul   ns/day  # GPUtype, processor, GROMACS version, directory\n" > $BASE/$OUTPUTFILE
 printf "The following errors occured:\n" > $BASE/$OUTPUT_ERR
 
 for MDSYSTEM in "MEM" ; do  # can add more MD systems to test here
