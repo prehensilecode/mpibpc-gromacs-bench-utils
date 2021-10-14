@@ -47,7 +47,7 @@ for MDSYSTEM in "MEM" ; do  # can add more MD systems to test here
                    if [ -z $N_OMP__ ]; then
                        N_OMP__=1
                    fi
-                   N_GPU__=`grep      'GPUs selected for this run'   $FILENM | awk '{ print $4 }'`
+                   N_GPU__=`egrep     '[0-9]+\ compatible GPUs'      $FILENM | cut -f 3 -d , | awk '{ print $1 }'`
                    NANOSPD=`grep      'Performance'                  $FILENM | awk '{ print $2 }'`
                    NEIGHBS=`grep      'Neighbor search'              $FILENM | awk '{ print $8 }'`
                    NSTLIST=`egrep     'nstlist\ += '                 $FILENM | awk '{ print $3 }'`
